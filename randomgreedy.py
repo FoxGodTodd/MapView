@@ -1,4 +1,7 @@
 #random greedy
+import numpy as np
+import pandas as pd
+
 def addRandomSwaps(df,ordered_indices):
     order = np.copy(ordered_indices)
     M = len(order)
