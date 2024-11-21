@@ -106,8 +106,8 @@ def greedy_with_random_sampling(df,randfloat1):
                         #prev_lat, prev_lon = df.loc[prev_index, 'coordinates']
                         
                         # Vectors from previous to current, and from current to next candidate
-                        v1 = np.array([lat1 - prev_lat, lon1 - prev_lon])
-                        v2 = np.array([lat2 - lat1, lon2 - lon1])
+                        v1 = np.array([float(lat1) - float(prev_lat), float(lon1) - float(prev_lon)])
+                        v2 = np.array([float(lat2) - float(lat1), float(lon2) - float(lon1)])
                         
                         # Calculate penalty based on the direction change (backtracking)
                         penalty = backtrack_penalty(v1, v2, randfloat1)
