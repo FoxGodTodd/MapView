@@ -1,11 +1,4 @@
 #viewbrief
-import streamlit as st
-import pandas as pd
-import numpy as np
-from geopy.distance import geodesic
-import randomgreedy as rndgreed
-import time
- 
 re_ordered = ''
 
 st.title('Brief Map View')
@@ -25,7 +18,7 @@ else:
     upload_file = st.session_state["upload"]
     print('starting')
     with st.spinner('Please wait...'):
-        re_ordered,original, url = rndgreed.mainloop(upload_file)
+        re_ordered,original, url = randomgreedy.mainloop(upload_file)
         time.sleep(1)
     st.header('Re-Ordered Brief:')   
     st.write(original)  
@@ -35,4 +28,3 @@ else:
     st.write(re_ordered[:'J'])
     st.header('MyMap Layer 2:')  
     st.write(re_ordered['J':])
-
