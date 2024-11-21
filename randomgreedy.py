@@ -1,9 +1,4 @@
 #random greedy
-import pandas as pd
-import numpy as np
-from geopy.distance import geodesic
-import string
-
 def addRandomSwaps(df,ordered_indices):
     order = np.copy(ordered_indices)
     M = len(order)
@@ -41,7 +36,7 @@ def swap_random(seq):
 def calculate_distance(lat1, lon1, lat2, lon2):
     coords_1 = (lat1, lon1)
     coords_2 = (lat2, lon2)
-    return geodesic(coords_1, coords_2,ellipsoid='Airy (1830)').km
+    return geopy.distance.geodesic(coords_1, coords_2,ellipsoid='Airy (1830)').km
     
 # Function to calculate the angle between two vectors (used to detect backtracking)
 def calculate_angle(v1, v2):
