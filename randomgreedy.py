@@ -132,7 +132,7 @@ def greedy_with_random_sampling(df,randfloat1):
 def mainloop(uploadFile):
     randfloat1 = np.random.default_rng() 
     df = pd.read_excel(uploadFile)
-    df2 = pd.read_csv('https://raw.githubusercontent.com/FoxGodTodd/MapView/edit/main/Locations.csv')
+    df2 = pd.read_csv('https://raw.githubusercontent.com/FoxGodTodd/MapView/main/Locations.csv')
     dforiginal = df.copy()
     
     df = df.dropna(subset=['Postcode'],ignore_index=True)  # Remove NaNs
