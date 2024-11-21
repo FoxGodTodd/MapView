@@ -6,8 +6,6 @@ from geopy.distance import geodesic
 import randomgreedy as rndgreed
 import time
  
-password = "MPC123mpc123"
-passW = ''
 re_ordered = ''
 
 st.title('Brief Map View')
