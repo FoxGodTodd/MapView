@@ -1,6 +1,7 @@
 #random greedy
 import numpy as np
 import pandas as pd
+import geopy
 
 def addRandomSwaps(df,ordered_indices):
     order = np.copy(ordered_indices)
