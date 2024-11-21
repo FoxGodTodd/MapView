@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 from geopy.distance import geodesic
+import string
 
 def addRandomSwaps(df,ordered_indices):
     order = np.copy(ordered_indices)
