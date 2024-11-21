@@ -19,8 +19,8 @@ def addRandomSwaps(df,ordered_indices):
                 prev_index = order[v-1]
                 prev_lat, prev_lon = df.loc[prev_index, 'Latitude'], df.loc[prev_index, 'Longitude']
                 #prev_lat, prev_lon = df.loc[prev_index, 'coordinates']
-                v1 = np.array([lat1 - prev_lat, lon1 - prev_lon])
-                v2 = np.array([lat2 - lat1, lon2 - lon1])
+                v1 = np.array([float(lat1) - float(prev_lat), float(lon1) - float(prev_lon)])
+                v2 = np.array([float(lat2) - float(lat1), float(lon2) - float(lon1)])
                 angle = 180*calculate_angle(v1, v2)/np.pi
                 dist+=(angle/M) #bigger angles mean worse penalties
             totdist += dist
